@@ -33,7 +33,7 @@
         <div class="bakery_review">리뷰</div>
         <div class="bakery_review_count">{{bakery.review_count}}</div>
     </div>
-    <div class="bakery_review_write">리뷰 작성하기</div>
+    <a href="{% url 'bakeries:review_write' bakery.id %}"><div class="bakery_review_write">리뷰 작성하기</div></a>
 </div>
 {% for review in bakery.reviews.all %}
 <div class="bakery_review_detail">

@@ -29,6 +29,11 @@
   color: #ac815a;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .bakery_review_write {
   font-size: 13px;
 }
@@ -103,3 +108,5 @@
   font-size: 13px;
   color: #383232;
 }
+
+

@@ -5,7 +5,7 @@
 <head>
     <!-- meta 태그 모음 -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 
     <!-- 타이틀 -->
@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="{% static 'core/css/base.css' %}">
     {% block css %}
     <!-- 페이지별 개별적으로 css를 추가하는 부분 -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     {% endblock css %}
 
     {% block head_script %}
@@ -62,10 +63,13 @@
             <img style="width: 22px;" src="{% static 'core/img/user.png' %}" alt="user icon">
         </a>
     </div>
+    <div class="list jsList">
+    </div>
     {% endblock bottom_icons %}
 
     {% block script %}
     <!-- JS/JQuery 스크립트 추가하는 부분 -->
+    <script src="{% static 'bakeries/js/enlarge.js' %}"></script>
     {% endblock script %}
 </body>
 

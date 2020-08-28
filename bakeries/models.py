@@ -10,17 +10,6 @@ import random
 
 
 # Photo 모델의 사진경로 설정 함수
-def logo_photo_path(instance, filename):
-    basefilename, file_extension = os.path.splitext(filename)
-    chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
-    randomstr = "".join((random.choice(chars)) for x in range(10))
-    return "bakery/image/{bakeryid}/{randomstring}{ext}".format(
-        bakeryid=instance.id,
-        basename=basefilename,
-        randomstring=randomstr,
-        ext=file_extension,
-    )
-
 
 class Bakery(models.Model):
     name = models.CharField(max_length=100)  # 빵집 이름
@@ -42,7 +31,7 @@ class Bakery(models.Model):
     # 도시(진주/울산/전주/의정부 등)
 
     def review_count(self):
-        return count
+        return self.reviews.all().count()
 
     def total_rating(self):
         all_reviews_rating_list = list(map(lambda x: x.rating, self.reviews.all()))

@@ -135,8 +135,15 @@
   margin-left: 5px;
   color: #ac815a;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .bakery_review_write {
   font-size: 13px;
+  }
 }
 .bakery_review_smallbox {
   display: flex;
@@ -204,3 +211,4 @@
   left: 100px;
   top: 200px;
 }
+
